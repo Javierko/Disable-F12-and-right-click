@@ -1,0 +1,1 @@
+<h3>Disable key F12 and right click on mouse</h3>

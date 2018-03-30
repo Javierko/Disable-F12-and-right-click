@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Disable right click and F12</title>
+		
+		<script src="http://sibeeshpassion.com/content/scripts/jquery-1.11.1.min.js"></script>  
+		<script> 
+			<!--Here is F12 function--> 
+			document.onkeypress = function (event) 
+			{  
+				event = (event || window.event);  
+				if (event.keyCode == 123) 
+				{  
+					return false;  
+				}  
+			}  
+		
+			document.onmousedown = function (event) 
+			{  
+				event = (event || window.event);  
+				if (event.keyCode == 123) 
+				{  
+					return false;  
+				}  
+			}  
+		
+			document.onkeydown = function (event) 
+			{  
+				event = (event || window.event);  
+				if (event.keyCode == 123) 
+				{  
+					return false;  
+				}  
+			}  
+			<!--Here ends F12 function-->
+      
+			<!--Here is right click-->
+			var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+
+			if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+
+			function mischandler()
+			{
+				return false;
+			}
+
+			function mousehandler(e)
+			{
+				var myevent = (isNS) ? e : event;
+				var eventbutton = (isNS) ? myevent.which : myevent.button;
+				if((eventbutton==2)||(eventbutton==3)) return false;
+			}
+			document.oncontextmenu = mischandler;
+			document.onmousedown = mousehandler;
+			document.onmouseup = mousehandler;
+			<!--Here ends right click-->
+		</script>
+	</head>
+  <body>
+    <center>
+      <h3>Now you can see how it works, just press F12 or click with right mouse button to test it.. :)</h3>
+    </center>
+  </body>
+</html>
