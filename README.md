@@ -1,1 +1,1 @@
-<h3>Disable key F12 and right click on mouse</h3>
+<h3>Disable console, download and other keys to copy your website :)</h3>
