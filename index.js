@@ -12,7 +12,7 @@ document.onkeydown = function(e) {
 	}
 };
 
-const isNetScape = (navigator.appName == "Netscape") ? 1 : 0;
+const isNetScape = navigator.appName == "Netscape" ? 1 : 0;
 
 if(isNetScape) {
 	document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
