@@ -1,7 +1,7 @@
-$(document).keydown(function(event) {
-	if(event.keyCode == 123) {
+$(document).keydown(function(e) {
+	if(e.keyCode == 123) {
 		return false;
-	} else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+	} else if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
 		return false;
 	}
 });
